@@ -9,14 +9,10 @@
 
 body {
     font-family: ‘Roboto’, sans-serif;
-}
-
-header {
-    height: 20vh;
-    background-color: var(--bz-app-header);
+    
 }
 
 main {
-    height: 80vh;
-    background-color: var(--bz-app-principal);
-}
+    height: 100vh;
+    background: linear-gradient(to bottom, var(--bz-app-header) 20%, var(--bz-app-principal) 0%);
+} 
