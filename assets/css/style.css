@@ -18,13 +18,33 @@ main {
     background: linear-gradient(to bottom, var(--bz-app-gradient) 20%, var(--bz-app-principal) 0%);
 }
 
-a {
-    text-decoration: none;
-    color: black;
+.sfondo {
+    height: 75vh;
+    background-image: url(/assets/img/mine.jpg);
+    background-size: auto;
+    background-color: var(--bz-app-dark);
 }
 
+a {
+    text-decoration: none;
+    color: var(--bz-app-dark);
+}
+#chat_active {
+    height: 8vh;
+    background-color: var(--bz-app-light);
+
+    & img {
+        max-width: 100%;
+        border-radius: 50%;
+        width: 6vh;
+    }
+}    
+    & .info_mex {
+        font-size: 8px;
+        color: var(--bz-app-dark);
+}
 #user {
-    height: 7vh;
+    height: 8vh;
     background-color: var(--bz-app-light);
 
     & img {
@@ -104,4 +124,30 @@ a {
     position: absolute;
     right: 5px;
     top: -5px;
+}
+
+#message_area {
+    
+    
+    & .message {
+        font-size: 10px;
+        border-radius: 5px;
+        padding: 0.8rem 0.4rem;
+        margin: 0.8rem 0;
+    }
+
+    & .user_message {
+        background-color: var(--bz-app-success);
+        align-self: end;
+    }
+
+    & .contact_message {
+        background-color: var(--bz-app-white);
+    }
+
+    & small {
+        font-size: 8px;
+        right: 5px;
+        color: var(--bz-app-dark);
+    }
 }
