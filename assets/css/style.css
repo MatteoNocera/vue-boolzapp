@@ -2,6 +2,7 @@
     --bz-app-principal: #dbdbd2;
     --bz-app-gradient: #009688;
     --bz-app-success: #d5f9ba;
+    --bz-app-dark: #b1b1b1;
     --bz-app-light: #e9ebeb;
     --bz-app-white: #ffffff;
     --bz-app-focus: #8edafc;
@@ -20,4 +21,18 @@ main {
 #user {
     height: 7vh;
     background-color: var(--bz-app-light);
+}
+
+img {
+    max-width: 100%;
+    border-radius: 50%;
+    width: 4vh;
+}
+
+.name {
+    font-size: 10px;
+}
+
+i {
+    color: var(--bz-app-dark);
 }
