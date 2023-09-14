@@ -18,9 +18,19 @@ main {
     background: linear-gradient(to bottom, var(--bz-app-gradient) 20%, var(--bz-app-principal) 0%);
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 #user {
     height: 7vh;
     background-color: var(--bz-app-light);
+}
+
+#notify {
+    height: 8vh;
+    background-color: var(--bz-app-focus);
 }
 
 img {
@@ -33,6 +43,33 @@ img {
     font-size: 10px;
 }
 
-i {
+#user i {
     color: var(--bz-app-dark);
+}
+
+#notify {
+
+    > .icon {
+        background-color: var(--bz-app-white);
+        height: 6vh;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+    }
+    
+
+    & i {
+        color: var(--bz-app-focus);
+    }
+
+    & p {
+        font-size: 10px;
+        margin: 0;
+    }
+
+    & a {
+        font-size: 8px;
+        color: var(--bz-app-dark);
+    }
+
+
 }
