@@ -1,6 +1,6 @@
 :root {
     --bz-app-principal: #dbdbd2;
-    --bz-app-header: #009688;
+    --bz-app-gradient: #009688;
     --bz-app-success: #d5f9ba;
     --bz-app-light: #e9ebeb;
     --bz-app-white: #ffffff;
@@ -14,5 +14,10 @@ body {
 
 main {
     height: 100vh;
-    background: linear-gradient(to bottom, var(--bz-app-header) 20%, var(--bz-app-principal) 0%);
-} 
+    background: linear-gradient(to bottom, var(--bz-app-gradient) 20%, var(--bz-app-principal) 0%);
+}
+
+#user {
+    height: 7vh;
+    background-color: var(--bz-app-light);
+}
