@@ -138,7 +138,7 @@ a {
 
     & .user_message {
         background-color: var(--bz-app-success);
-        align-self: end;
+        
     }
 
     & .contact_message {
@@ -150,4 +150,10 @@ a {
         right: 5px;
         color: var(--bz-app-dark);
     }
+
+    & .my_message{
+        background-color: var(--bz-app-dark);
+    }
+
+    
 }

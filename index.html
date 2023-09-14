@@ -73,7 +73,7 @@
                     <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
                 </div>
 
-                <div id="all_chats" class="overflow-y-visible">
+                <div id="all_chats" class="overflow-y-scroll">
                     
                     <div id="chat" class="d-flex align-items-center justify-content-between p-2 position-relative">
                         <div class="d-flex align-items-center gap-2">
@@ -143,25 +143,38 @@
 
                     </div>
 
-                    <div class="sfondo d-flex p-5">
-                        <div class="d-flex flex-column">
+                    <div class="sfondo p-5">
+                        
 
-                            <div class="message user_message">
+                        <div class="row flex-column align-content-end mx-5">
+                            <div class="w-50 message user_message position-relative px-4">
                                 Hai portato a spasso il cane?
-                                <small class="">15.30</small>
+                                <small class="position-absolute bottom-0">15.30</small>
                             </div>
-
-                            <div class="message user_message">
-                                Ricordati di stendere i panni
-                                <small class="">15.30</small>
-                            </div>
-
-                            <div class="message contact_message">
-                                Tutto Fatto
-                                <small class="">15.30</small>
-                            </div>
-                            
                         </div>
+                        
+                        <div class="row flex-column align-content-end mx-5">
+                            <div class="w-50 message user_message position-relative px-4">
+                                Ricordati di stendere i panni
+                                <small class="position-absolute bottom-0">15.30</small>
+                            </div>
+                        </div>
+
+                        <div class="row flex-column mx-5">
+                            <div class="w-50 message contact_message position-relative">
+                                Tutto fatto!
+                                <small class="position-absolute bottom-0">15.30</small>
+                            </div>
+                        </div>
+                        
+                            
+                        
+                    </div>
+
+                    <div class="my_message d-flex">
+                        <a class="col-1" href="#">
+                            <i class="fa-regular fa-face-smile"></i>
+                        </a>
                     </div>
 
                 </div>
