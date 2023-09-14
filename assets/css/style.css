@@ -105,7 +105,7 @@ a {
     }
 }
 
-#chat {
+.chat {
     height: 8vh;
     background-color: var(--bz-app-white);
 
