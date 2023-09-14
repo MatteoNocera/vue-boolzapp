@@ -26,6 +26,12 @@ a {
 #user {
     height: 7vh;
     background-color: var(--bz-app-light);
+
+    & img {
+        max-width: 100%;
+        border-radius: 50%;
+        width: 5vh;
+    }
 }
 
 #notify {
@@ -33,11 +39,7 @@ a {
     background-color: var(--bz-app-focus);
 }
 
-img {
-    max-width: 100%;
-    border-radius: 50%;
-    width: 4vh;
-}
+
 
 .name {
     font-size: 10px;
@@ -79,6 +81,27 @@ img {
 
     >  button {
         background-color: var(--bz-app-white);
+        border: 1px solid var(--bz-app-dark);
     }
 }
 
+#chat {
+    height: 8vh;
+    background-color: var(--bz-app-white);
+
+    & img {
+        max-width: 100%;
+        border-radius: 50%;
+        width: 6vh;
+    }
+    & .info_mex {
+        font-size: 8px;
+        color: var(--bz-app-dark);
+    }
+}
+
+#time_last_message {
+    position: absolute;
+    right: 5px;
+    top: -5px;
+}
