@@ -6,3 +6,17 @@
     --bz-app-white: #ffffff;
     --bz-app-focus: #8edafc;
 }
+
+body {
+    font-family: ‘Roboto’, sans-serif;
+}
+
+header {
+    height: 20vh;
+    background-color: var(--bz-app-header);
+}
+
+main {
+    height: 80vh;
+    background-color: var(--bz-app-principal);
+}
