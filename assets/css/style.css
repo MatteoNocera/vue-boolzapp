@@ -73,3 +73,12 @@ img {
 
 
 }
+
+#search {
+    background-color: var(--bz-app-light);
+
+    >  button {
+        background-color: var(--bz-app-white);
+    }
+}
+
