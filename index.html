@@ -144,14 +144,16 @@
 
                     <div class="sfondo p-5">
                         
+                        
                         <div class="row flex-column align-content-end mx-5">
-                            <div v-for="(message, index) in messages" class="w-50 message user_message position-relative px-4">
-                                {{contacts[activeContact].messages[index].message}}
+                            <!-- ciclo i messaggi -->
+                            <div v-for="message in contacts[activeContact].messages" class="w-50 message user_message position-relative px-4">
+                                {{message.message}}
                                 <small class="position-absolute bottom-0">15.30</small>
                             </div>
                         </div>
                         
-                        <div class="row flex-column align-content-end mx-5">
+                        <!-- <div class="row flex-column align-content-end mx-5">
                             <div class="w-50 message user_message position-relative px-4">
                                 Ricordati di stendere i panni
                                 <small class="position-absolute bottom-0">15.30</small>
@@ -163,7 +165,7 @@
                                 Tutto fatto!
                                 <small class="position-absolute bottom-0">15.30</small>
                             </div>
-                        </div>
+                        </div> -->
                         
                             
                         
