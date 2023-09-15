@@ -78,7 +78,8 @@
     
                     <div id="all_chats" class="overflow-y-scroll">
                         
-                        <div :class="i === activeContact ? 'active' : ''" v-for="(contact, i) in contacts" :id="i" class="chat d-flex align-items-center justify-content-between p-2 position-relative">
+                        <!-- ciclo i contatti -->
+                        <div :class="i === activeContact ? 'active' : ''" v-for="(contact, i) in contacts" :id="i" class="chat d-flex align-items-center justify-content-between p-2 position-relative" @click="selected(contact.name, i)">
                             <a href="#" class="d-flex align-items-center gap-2">
                                 
                                 <img :src="contact.avatar" :alt="[`avatar n` + i]">
@@ -144,7 +145,7 @@
 
                     <div class="sfondo p-5">
                         
-                        <!-- ciclo i messaggi -->
+                        <!-- ciclo i messaggi ed inserisco le classi per la corretta visualizzazione-->
                         <div v-for="message in contacts[activeContact].messages" class="row flex-column mx-5" :class="message.status == 'sent' ? 'align-content-end' : ''">
                             
                             <div :class="message.status == 'sent' ? 'sent align-content-end' : 'received'" class="w-50 message  position-relative px-4">
@@ -172,8 +173,11 @@
                     
                     
                 </section>
+
             </div>
+
         </main>
+
     </div>
     
 

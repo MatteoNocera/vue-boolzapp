@@ -190,6 +190,12 @@ const { createApp } = Vue
             
         ]
       }
+    },
+    methods: {
+        selected(contact, i) {
+            console.log(`hai cliccato l'utente ${contact}`);
+            this.activeContact = i;
+        }
     }
   }).mount('#app')
 
