@@ -17,8 +17,6 @@ const { createApp } = Vue
     data() {
       return {
 
-        send: false,
-
         newMessage: '',
 
         activeContact: 4,
@@ -203,10 +201,13 @@ const { createApp } = Vue
         addMessage() {
             console.log(this);
             
+            this.newMessage.unshift({
+                ...this.newMessage
+            });
+            console.log(newMessage);
             
             
-            
-        },
+        }/* ,
         stampMarkup() {
             const markUp = `
             <div class="row flex-column mx-5 align-content-end">
@@ -217,7 +218,7 @@ const { createApp } = Vue
                     </small>
                 </div>   
             </div>`
-        }
+        } */
     }
   }).mount('#app')
 
