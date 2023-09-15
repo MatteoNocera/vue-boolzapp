@@ -154,12 +154,12 @@ a {
         margin: 0.8rem 0;
     }
 
-    & .user_message {
+    & .send {
         background-color: var(--bz-app-success);
         
     }
 
-    & .contact_message {
+    & .received {
         background-color: var(--bz-app-white);
     }
 

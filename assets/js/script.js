@@ -19,6 +19,8 @@ const { createApp } = Vue
 
         activeContact: 0,
 
+        status: 'send',
+
         meContact: [
             {
                 name: 'Matteo',

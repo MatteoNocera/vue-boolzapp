@@ -145,9 +145,9 @@
                     <div class="sfondo p-5">
                         
                         
-                        <div class="row flex-column align-content-end mx-5">
+                        <div class="row flex-column mx-5 align-content-end">
                             <!-- ciclo i messaggi -->
-                            <div v-for="message in contacts[activeContact].messages" class="w-50 message user_message position-relative px-4">
+                            <div v-for="message in contacts[activeContact].messages" :class="status == 'send' ? 'send align-content-end' : 'received'" class="w-50 message  position-relative px-4">
                                 {{message.message}}
                                 <small class="position-absolute bottom-0">15.30</small>
                             </div>
