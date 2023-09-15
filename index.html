@@ -145,8 +145,8 @@
                     <div class="sfondo p-5">
                         
                         <div class="row flex-column align-content-end mx-5">
-                            <div class="w-50 message user_message position-relative px-4">
-                                try 
+                            <div v-for="(message, index) in messages" class="w-50 message user_message position-relative px-4">
+                                {{contacts[activeContact].messages[index].message}}
                                 <small class="position-absolute bottom-0">15.30</small>
                             </div>
                         </div>

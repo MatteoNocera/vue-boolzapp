@@ -17,7 +17,7 @@ const { createApp } = Vue
     data() {
       return {
 
-        activeContact: 4,
+        activeContact: 0,
 
         meContact: [
             {
