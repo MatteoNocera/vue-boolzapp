@@ -2,13 +2,26 @@
 Descrizione:
 Iniziamo a lavorare alla nostra replica della nota app di messaggistica. L'esercitazione sará divisa in piú giornate, oggi iniziamo a lavorare alla prima milestone che vi
 riporto di seguito:
-Milestone 1
-Replica della grafica con la possibilità di avere messaggi scritti dall'utente (verdi) e dall'interlocutore (bianco) assegnando due classi CSS diverse
-Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto
-Consigli:
-lavorate ad una task per volta, finita la prima passate alla seconda
-ragionate con calma sugli strumenti necessari per svolgere la seconda task,
-leggete le pagine della documentazione che vi ho indicato oggi in classe.
+Milestone 1 ✅
+- Replica della grafica con la possibilità di avere messaggi scritti dall'utente (verdi) e dall'interlocutore (bianco) assegnando due classi CSS diverse
+- Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto
+
+
+Milestone 2 ✅
+● Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i
+messaggi relativi al contatto attivo all’interno del pannello della conversazione
+● Click sul contatto mostra la conversazione del contatto cliccato
+
+
+Milestone 3 
+● Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando
+“enter” il testo viene aggiunto al thread sopra, come messaggio verde
+● Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà
+
+Milestone 4
+● Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i
+contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo
+“mar” rimangono solo Marco e Martina
 */
 
 const { createApp } = Vue
@@ -200,11 +213,11 @@ const { createApp } = Vue
         },
         addMessage() {
             console.log(this);
+            console.log(this.newMessage);
             
-            this.newMessage.unshift({
-                ...this.newMessage
-            });
-            console.log(newMessage);
+
+
+
             
             
         }/* ,
