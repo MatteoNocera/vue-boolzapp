@@ -29,11 +29,12 @@
                 <section id="nav" class="col-4">
     
                     <div id="user" class="d-flex justify-content-between px-2">
-                        <div id="user_data" class="d-flex align-items-center gap-1">
-                            <img src="./assets/img/avatar_1.jpg" alt="user image">
-                            <span class="name">Matteo</span>
+                        <div id="user_data"
+                        v-for="me in meContact" class="d-flex align-items-center gap-1">
+                            <img :src="me.avatar" alt="user image">
+                            <span class="name">{{me.name}}</span>
                         </div>
-                        <div id="user_actions" class="d-flex align-items-center gap-3">
+                        <div class="d-flex align-items-center gap-3">
     
                             <a href="#">
                                 <i class="fa-solid fa-circle-notch fa-sm"></i>
@@ -77,12 +78,12 @@
     
                     <div id="all_chats" class="overflow-y-scroll">
                         
-                        <div v-for="(contact, i) in contacts" :id="i" class="chat d-flex align-items-center justify-content-between p-2 position-relative">
+                        <div :class="i === activeContact ? 'active' : ''" v-for="(contact, i) in contacts" :id="i" class="chat d-flex align-items-center justify-content-between p-2 position-relative">
                             <div class="d-flex align-items-center gap-2">
                                 <a href="#">
                                     <img :src="contact.avatar" :alt="[`avatar n` + i]">
                                 </a>
-                                <div id="contact_info" class="d-flex flex-column">
+                                <div  class="d-flex flex-column">
                                     <span class="name">{{contact.name}}</span>
                                     <small class="info_mex">Ultimo messaggio inviato alle ore</small>
                                 </div>

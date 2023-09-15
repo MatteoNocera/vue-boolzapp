@@ -16,6 +16,15 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+
+        activeContact: 3,
+
+        meContact: [
+            {
+                name: 'Matteo',
+                avatar: './assets/img/avatar_1.jpg'
+            }
+        ],
         contacts: [
             {
                 name: 'Michele',

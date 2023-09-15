@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --bz-app-principal: #dbdbd2;
     --bz-app-gradient: #009688;
@@ -10,16 +16,27 @@
 
 /* find to modify input text */
 input[type="text"] {  
-    font-size: 10px;   
+    font-size: 12px;   
 }
 
 body {
     font-family: ‘Roboto’, sans-serif;
+    overflow: hidden;
+    
 }
 
 main {
     background: linear-gradient(to bottom, var(--bz-app-gradient) 20%, var(--bz-app-principal) 0%);
-    height: 100vh;  
+    height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    height: calc(100% - 4rem);
+}
+
+#nav, #message_area {
+    height: 100%;
 }
 
 .sfondo {
@@ -27,7 +44,7 @@ main {
     background-image: url(/assets/img/mine.jpg);
     background-size: auto;
     background-color: var(--bz-app-dark);
-    height: 600px;
+    height: calc(100% - 130px);
 }
 
 a {
@@ -35,7 +52,7 @@ a {
     color: var(--bz-app-dark);
 }
 #chat_active {
-    height: 50px;
+    height: 80px;
     background-color: var(--bz-app-light);
 
     & img {
@@ -45,22 +62,22 @@ a {
     }
 }    
     & .info_mex {
-        font-size: 8px;
+        font-size: 12px;
         color: var(--bz-app-dark);
 }
 #user {
-    height: 50px;
+    height: 80px;
     background-color: var(--bz-app-light);
 
     & img {
         max-width: 100%;
         border-radius: 50%;
-        width: 40px;
+        width: 60px;
     }
 }
 
 .name {
-    font-size: 10px;
+    font-size: 18px;
 }
 
 #user i {
@@ -68,7 +85,7 @@ a {
 }
 
 #notify {
-    height: 50px;
+    height: 80px;
     background-color: var(--bz-app-focus);
 
     > .icon {
@@ -84,12 +101,12 @@ a {
     }
 
     & p {
-        font-size: 10px;
+        font-size: 16px;
         margin: 0;
     }
 
     & a {
-        font-size: 8px;
+        font-size: 12px;
         color: var(--bz-app-dark);
     }
 
@@ -97,7 +114,7 @@ a {
 }
 
 #search {
-    background-color: var(--bz-app-light);
+    background-color: var(--bz-app-white);
     height: 50px;
 
     >  button {
@@ -107,16 +124,16 @@ a {
 }
 
 .chat {
-    height: 50px;
+    height: 80px;
     background-color: var(--bz-app-white);
 
     & img {
         max-width: 100%;
         border-radius: 50%;
-        width: 40px;
+        width: 60px;
     }
     & .info_mex {
-        font-size: 8px;
+        font-size: 14px;
         color: var(--bz-app-dark);
     }
 }
@@ -129,9 +146,12 @@ a {
 
 #message_area {
     
+    & #active_chat {
+        height: 100%;
+    }
     
     & .message {
-        font-size: 10px;
+        font-size: 16px;
         border-radius: 5px;
         padding: 0.8rem 0.4rem;
         margin: 0.8rem 0;
@@ -147,7 +167,7 @@ a {
     }
 
     & small {
-        font-size: 8px;
+        font-size: 10px;
         right: 5px;
         color: var(--bz-app-dark);
     }
@@ -155,7 +175,7 @@ a {
 }
 
 #all_chats {
-    height: 550px;
+    height: calc(100% - 210px);
     overflow-y: scroll;
     background-color: var(--bz-app-white);
 }
@@ -167,4 +187,8 @@ a {
     & input {
         width: 80%;
     }
+}
+
+.active {
+    background-color: var(--bz-app-light);
 }
