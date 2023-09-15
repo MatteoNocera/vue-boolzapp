@@ -17,6 +17,10 @@ const { createApp } = Vue
     data() {
       return {
 
+        send: false,
+
+        newMessage: '',
+
         activeContact: 4,
 
         meContact: [
@@ -195,7 +199,37 @@ const { createApp } = Vue
         selected(contact, i) {
             console.log(`hai cliccato l'utente ${contact}`);
             this.activeContact = i;
+        },
+        addMessage() {
+            console.log(this);
+            
+            
+            
+            
+        },
+        stampMarkup() {
+            const markUp = `
+            <div class="row flex-column mx-5 align-content-end">
+                <div class="sent w-50 message position-relative px-4">
+                    {{newMessage}}
+                    <small class="position-absolute bottom-0">
+                        15.30
+                    </small>
+                </div>   
+            </div>`
         }
     }
   }).mount('#app')
 
+
+
+/* 
+<div class="row flex-column mx-5 align-content-end">
+    <div class="sent w-50 message position-relative px-4">
+        {{newMessage}}
+        <small class="position-absolute bottom-0">
+            15.30
+        </small>
+    </div>   
+</div>
+*/

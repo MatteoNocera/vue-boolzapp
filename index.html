@@ -148,12 +148,14 @@
                         <!-- ciclo i messaggi ed inserisco le classi per la corretta visualizzazione-->
                         <div v-for="message in contacts[activeContact].messages" class="row flex-column mx-5" :class="message.status == 'sent' ? 'align-content-end' : ''">
                             
-                            <div :class="message.status == 'sent' ? 'sent align-content-end' : 'received'" class="w-50 message  position-relative px-4">
+                            <div :class="message.status == 'sent' ? 'sent align-content-end' : 'received'" class="w-50 message position-relative px-4">
                                 {{message.message}}
                                 <small class="position-absolute bottom-0">15.30</small>
                             </div>
 
-                        </div>                  
+                        </div>
+
+                        
                              
                     </div>
 
@@ -162,13 +164,17 @@
                             <i class="fa-regular fa-face-smile"></i>
                         </a>
 
-                        <input type="text" class="form-control" placeholder="Scrivi un messaggio">
+                        <input type="text" class="form-control" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="addMessage()">
 
                         <a class="col-1 d-flex justify-content-center" href="#">
                             <i class="fa-solid fa-microphone"></i>
                         </a>
                         
                     </div>
+
+                    <template >
+
+                    </template>
     
                     
                     
