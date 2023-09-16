@@ -13,10 +13,9 @@ messaggi relativi al contatto attivo all’interno del pannello della conversazi
 ● Click sul contatto mostra la conversazione del contatto cliccato
 
 
-Milestone 3 
+Milestone 3 ✅
 ● Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando
-“enter” il testo viene aggiunto al thread sopra, come messaggio verde✅
-
+“enter” il testo viene aggiunto al thread sopra, come messaggio verde
 ● Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà
 
 Milestone 4
@@ -225,12 +224,18 @@ const { createApp } = Vue
                 this.contacts[this.activeContact].messages.push(newObject);
 
                 this.newMessage = '';
-            }
+            }            
+        },
+        autoMessages() {
+            this.backMessage = setTimeout(() => {
+                const autoObject = {
+                    message: 'ok, grazie',
+                    status: 'received',
+                    date: '16/09/2023 12:05:03'
+                };
+                this.contacts[this.activeContact].messages.push(autoObject);
+            }, 2000);
 
-
-
-            
-            
         }
         
     }

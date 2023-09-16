@@ -177,7 +177,7 @@
                             <i class="fa-regular fa-face-smile"></i>
                         </a>
 
-                        <input type="text" class="form-control" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="addMessage()">
+                        <input type="text" class="form-control" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="addMessage(); autoMessages()">
 
                         <a class="col-1 d-flex justify-content-center" href="#">
                             <i class="fa-solid fa-microphone"></i>
