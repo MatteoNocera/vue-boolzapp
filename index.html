@@ -96,9 +96,9 @@
                         <div id="all_chats" class="overflow-y-scroll">
 
                             <!-- ciclo i contatti -->
-                            <div :class="i === activeContact ? 'active' : ''"
+                            <div :class="i === activeContact ? 'active' : '', visib == false ? 'd-none' : ''"
                                 v-for="(contact, i) in contacts" :id="i"
-                                class="chat d-flex align-items-center justify-content-between p-2 position-relative" :class="visib != true ? 'd-none' : ''"
+                                class="chat d-flex align-items-center justify-content-between p-2 position-relative" 
                                 @click="selected(contact.name, i)">
                                 <a href="#"
                                     class="d-flex align-items-center gap-2">
