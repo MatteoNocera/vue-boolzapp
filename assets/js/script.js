@@ -243,12 +243,12 @@ const { createApp } = Vue
             
             this.contacts.forEach(contact => {
 
-                const pippo = this.newSearch.toLowerCase();
-                const pluto = contact.name.toLowerCase();
+                const lowerSearch = this.newSearch.toLowerCase();
+                const lowerName = contact.name.toLowerCase();
                 
-                console.log(pluto);
+                console.log(lowerName);
 
-                console.log(pippo);
+                console.log(lowerSearch);
                 
                 if (contact.name.includes(this.newSearch)) {
                     
