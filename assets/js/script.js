@@ -223,7 +223,7 @@ const { createApp } = Vue
         addMessage() {
              
             // imposto orario messaggio
-            var DateTime = luxon.DateTime;
+            let DateTime = luxon.DateTime;
             const now = DateTime.now().toFormat('HH:mm');
             //console.log(now);
 
@@ -243,7 +243,7 @@ const { createApp } = Vue
         autoMessages() {
 
             // imposto orario messaggio più i 2 sec di ritardo
-            var DateTime = luxon.DateTime;
+            let DateTime = luxon.DateTime;
             const nowPlusTwo = DateTime.now().plus({second: 2}).toFormat('HH:mm');
 
             this.backMessage = setTimeout(() => {
@@ -288,6 +288,9 @@ const { createApp } = Vue
             });
            
 
+        },
+        lastMessage() {
+            
         }                
     }
   }).mount('#app')
