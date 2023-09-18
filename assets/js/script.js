@@ -248,18 +248,20 @@ const { createApp } = Vue
                 
                 console.log(lowerName);
 
-                console.log(lowerSearch);
+                //console.log(lowerSearch);
                 
+                //console.log(contact.visib);
+
                 if (lowerName.includes(lowerSearch)) {
                     
-                    visib = true;
+                    contact.visib = true;
                     
-                    console.log(visib);
+                    console.log(contact.visib);
                 } else {
 
-                    visib = false;
-                    
-                    console.log(visib);
+                    contact.visib = false;
+
+                    console.log(contact.visib);
                 }
                 
 
