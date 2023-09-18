@@ -30,6 +30,8 @@ const { createApp } = Vue
     data() {
       return {
 
+        newSearch: '',
+
         newMessage: '',
 
         activeContact: 4,
@@ -44,7 +46,7 @@ const { createApp } = Vue
             {
                 name: 'Michele',
                 avatar: './assets/img/avatar_1.jpg',
-                visible: true,
+                visib: true,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -66,7 +68,7 @@ const { createApp } = Vue
             {
                 name: 'Fabio',
                 avatar: './assets/img/avatar_2.jpg',
-                visible: true,
+                visib: true,
                 messages: [
                     {
                         date: '20/03/2020 16:30:00',
@@ -88,7 +90,7 @@ const { createApp } = Vue
             {
                 name: 'Samuele',
                 avatar: './assets/img/avatar_3.jpg',
-                visible: true,
+                visib: true,
                 messages: [
                     {
                         date: '28/03/2020 10:10:40',
@@ -110,7 +112,7 @@ const { createApp } = Vue
             {
                 name: 'Alessandro B.',
                 avatar: './assets/img/avatar_4.jpg',
-                visible: true,
+                visib: true,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -127,7 +129,7 @@ const { createApp } = Vue
             {
                 name: 'Alessandro L.',
                 avatar: './assets/img/avatar_5.jpg',
-                visible: true,
+                visib: true,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -144,7 +146,7 @@ const { createApp } = Vue
             {
                 name: 'Claudia',
                 avatar: './assets/img/avatar_5.jpg',
-                visible: true,
+                visib: true,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -166,7 +168,7 @@ const { createApp } = Vue
             {
                 name: 'Federico',
                 avatar: './assets/img/avatar_7.jpg',
-                visible: true,
+                visib: true,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -183,7 +185,7 @@ const { createApp } = Vue
             {
                 name: 'Davide',
                 avatar: './assets/img/avatar_8.jpg',
-                visible: true,
+                visib: true,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -236,21 +238,38 @@ const { createApp } = Vue
                 this.contacts[this.activeContact].messages.push(autoObject);
             }, 2000);
 
+        },
+        searchName() {  
+            
+            this.contacts.forEach(contact => {
+
+                const pippo = this.newSearch.toLowerCase();
+                const pluto = contact.name.toLowerCase();
+                
+                console.log(pluto);
+
+                console.log(pippo);
+                
+                if (contact.name.includes(this.newSearch)) {
+                    
+                    this.visib = true;
+                    console.log(this.visib);
+                } else {
+                    this.visib = false;
+                    console.log(this.visib);
+                }
+                
+
+                
+
+
+            });
+           
+
         }
         
     }
   }).mount('#app')
 
 
-
-/* 
-<div class="row flex-column mx-5 align-content-end">
-    <div class="sent w-50 message position-relative px-4">
-        {{newMessage}}
-        <small class="position-absolute bottom-0">
-            15.30
-        </small>
-    </div>   
-</div>
-*/
 

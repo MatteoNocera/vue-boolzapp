@@ -45,6 +45,7 @@ main {
     background-size: auto;
     background-color: var(--bz-app-dark);
     height: calc(100% - 130px);
+    overflow-y: auto;
 }
 
 a {
