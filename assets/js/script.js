@@ -18,10 +18,17 @@ Milestone 3 ✅
 “enter” il testo viene aggiunto al thread sopra, come messaggio verde
 ● Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà
 
-Milestone 4
+Milestone 4 ✅
 ● Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i
 contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo
 “mar” rimangono solo Marco e Martina
+
+Milestone 5 - opzionale
+● Cancella messaggio: cliccando sul messaggio appare un menu a tendina che
+permette di cancellare il messaggio selezionato
+
+● Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti
+
 */
 
 const { createApp } = Vue
@@ -215,13 +222,18 @@ const { createApp } = Vue
         },
         addMessage() {
              
+            // imposto orario messaggio
+            var DateTime = luxon.DateTime;
+            const now = DateTime.utc().toFormat('dd/MM/yyyy hh:mm:ss');
+            console.log(now);
+
             console.log(this);
             console.log(this.newMessage);
             if (this.newMessage != '') {
                 let newObject = {
                     message: this.newMessage,
                     status: 'sent',
-                    date: '15/09/2023 17:48:00'
+                    date: now
                 };
                 this.contacts[this.activeContact].messages.push(newObject);
 
@@ -229,11 +241,16 @@ const { createApp } = Vue
             }            
         },
         autoMessages() {
+
+            // imposto orario messaggio più i 2 sec di ritardo
+            var DateTime = luxon.DateTime;
+            const nowPlusTwo = DateTime.utc().plus({second: 2}).toFormat('dd/MM/yyyy hh:mm:ss');
+
             this.backMessage = setTimeout(() => {
                 const autoObject = {
                     message: 'ok, grazie',
                     status: 'received',
-                    date: '16/09/2023 12:05:03'
+                    date: nowPlusTwo
                 };
                 this.contacts[this.activeContact].messages.push(autoObject);
             }, 2000);
@@ -271,6 +288,9 @@ const { createApp } = Vue
             });
            
 
+        },
+        nowDate() {
+            
         }
         
     }
