@@ -288,11 +288,7 @@ const { createApp } = Vue
             });
            
 
-        },
-        changeFormatDates() {
-            this.date.toFormat('hh:mm')
-        }
-        
+        }                
     }
   }).mount('#app')
 
